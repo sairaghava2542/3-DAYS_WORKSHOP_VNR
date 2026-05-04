@@ -25,3 +25,4 @@ report_qor > qor.rpt
 report_area > area.rpt
 report_power > power.rpt
 
+write_sdc fifo_synthesis.sdc
