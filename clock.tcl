@@ -39,7 +39,7 @@ clock_opt
 #  to save the block
 ########################################################
 
-save_block -as full_adder_cts_CCD
+save_block -as fifo_cts_done
 save_lib
 
 
