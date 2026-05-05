@@ -2,9 +2,7 @@ set PDK_PATH ./../ref
 
  create_lib -technology ./../ref/tech/milkyway/saed32nm_1p9m_mw.tf -ref_lib ./../ref/lib/ndm/saed32rvt_c.ndm fifo.nlib
 
-
 read_verilog ./../dc/fifo_mapped_netlist.v -library fifo.nlib -design fifo -top fifo
-
 
 save_lib 
 #to open open_lib fifo.nlib
@@ -24,8 +22,6 @@ report_ref_lib
 # u can see name and path location
 get_flat_cells
 
-
-
 sizeof_collection [get_flat_cells]
 
 get_ports
@@ -40,21 +36,15 @@ get_ports -filter "direction==in"
 
 sizeof_collection [get_ports -filter "direction==in"]
 
-
 get_ports -filter "direction==out"
 
- sizeof_collection [get_ports -filter "direction==out"]
-
-
+sizeof_collection [get_ports -filter "direction==out"]
 
 get_port *clk
 
-
 initialize_floorplan -core_utilization 0.7 -core_offset 5 
 
-
 all_inputs
-
 
 set input_ports [remove_from_collection [all_inputs] [get_ports clk]]
 
@@ -62,18 +52,16 @@ set output_ports [all_outputs]
 
 set clock_port [get_ports clk]
 
-
 set_block_pin_constraints -side 1 -corner_keepout_distance 8 -pin_spacing 5 -self
 
- place_pins -port $input_ports
+place_pins -port $input_ports
 
 remove_block_pin_constraints
 #remove_ports $input_ports
 
 set_block_pin_constraints -side 3 -corner_keepout_distance 13 -pin_spacing 5 -self
 
- place_pins -port $output_ports
-
+place_pins -port $output_ports
 
 remove_block_pin_constraints  
 
