@@ -122,12 +122,12 @@ get_cells -hier -filter "is_physical_only == true"
 #
 #scenario1:
 ##
-initialize_floorplan
-set_individual_pin_constraints -ports [get_ports] -sides 3
-place_pins -self
-create_placement -floorplan
+#initialize_floorplan
+#set_individual_pin_constraints -ports [get_ports] -sides 3
+#place_pins -self
+#create_placement -floorplan
 #
-save_block -as FULL_ADD
+save_block -as 
 save_lib
 
 #scenario2:
