@@ -43,12 +43,7 @@ report_congestion
 report_timing -delay_type max
 report_timing -delay_type min
 
-set_lib_cell_purpose -include optimization [get_lib_cells {saed32rvt_c/TIEH_RVT saed32rvt_c/TIEL_RVT}]
-
-#This command will search your entire design for any pins that are currently connected to "Logic 1" (VDD) or "Logic 0" (VSS) and replace those connections with the physical Tie cells.
-
-add_tie_cells -objects [get_pins -hierarchical *] -lib_cells {saed32rvt_c/TIEH_RVT saed32rvt_c/TIEL_RVT} -max_fanout 10
 
 
-#save_block -as full_adder_placement
+#save_block -as ffifo_placement
 #save_lib
