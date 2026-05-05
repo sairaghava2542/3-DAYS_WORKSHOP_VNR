@@ -3,8 +3,6 @@
 ####################################################
 
 check_design -checks pre_clock_tree_stage
-
-
 ###################################################
 ##        CTS using CCD  commands
 ####################################################
@@ -41,6 +39,3 @@ clock_opt
 
 save_block -as fifo_cts_done
 save_lib
-
-
-
