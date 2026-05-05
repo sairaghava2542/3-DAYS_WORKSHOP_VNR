@@ -15,7 +15,6 @@ current_scenario func::nom
 
 source ./../DC/fifo_final.sdc 
 
-
 current_corner nom
 current_scenario func::nom
 
@@ -33,17 +32,11 @@ read_parasitic_tech -tlup $tluplus_filep2 -layermap $layer_map_filep2 -name p2
 set_parasitic_parameters -late_spec $parasitic1 -early_spec $parasitic2
 set_app_options -name place.coarse.continue_on_missing_scandef -value true
 
-
 place_opt
 legalize_placement
 report_congestion
 #check_celldensity
 #check_pin_density
-
-report_timing -delay_type max
-report_timing -delay_type min
-
-
 
 #save_block -as fifo_placement
 #save_lib
