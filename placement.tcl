@@ -45,5 +45,5 @@ report_timing -delay_type min
 
 
 
-#save_block -as ffifo_placement
+#save_block -as fifo_placement
 #save_lib
