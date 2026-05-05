@@ -55,7 +55,7 @@ compile_pg -strategies rail_strat
 ##########################################################
 ### step 5 : To save block and Save lib
 #############################################################
-## "save_block"  will save block as the deign name (full_adder.design) by default
+
 #
 save_block -as power_plan_done
 
