@@ -14,7 +14,7 @@ set_app_options -name route.track.crosstalk_driven -value true
 
 #detail route 
 set_app_options -name route.detail.timing_driven -value true
-#chnaged
+#changed
 set_app_options -name route.detail.force_max_number_iterations -value false
 set_app_options -name route.detail.antenna -value true
 set_app_options -name route.detail.antenna_fixing_preference -value use_diodes
