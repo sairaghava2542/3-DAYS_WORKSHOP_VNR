@@ -113,9 +113,6 @@ get_cells -hier -filter "is_physical_only == true"
 
 
 
-#open the lib and block after saving
-#open_lib FULL_ADDER_LIB
-#open_block FULL_ADD
 
 
 # FloorPlan settings
